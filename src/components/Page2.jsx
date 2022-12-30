@@ -28,7 +28,10 @@ function Page2() {
   useEffect(() => {
     if (currentSelecetedData.x != null) {
       if (selecetedButton != null) {
+        if(data?.length>0)
         setData([...data, { ...currentSelecetedData, btn: selecetedButton }])
+        else
+        setData([{...currentSelecetedData,btn:selecetedButton}])
       }
       else
         alert(" please click title or author button")
@@ -38,7 +41,7 @@ function Page2() {
 
   //  set data on local storage
   useEffect(() => {
-    if (data.length > 0)
+    if (data?.length > 0)
       localStorage.setItem("annotData", JSON.stringify(data))
 
   }, [data])
@@ -116,7 +119,7 @@ function Page2() {
           <div className="BoxesDiv">
             <h1>Boxes</h1>
             <div className="Box_contents">
-              {data.map((row) => (
+              {data?.map((row) => (
                 <div className="Box_content">
                   <p>x : {row.x},</p>
                   <p>y : {row.y},</p>
