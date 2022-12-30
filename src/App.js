@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {useNavigate} from 'react-router-dom'
 function App() {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate('/2')
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h2>Documents</h2>
+      <ul>
+        <li onClick={handleClick}>sample document1.pdf</li>
+        <li onClick={handleClick}>sample document2.pdf</li>
+        <li onClick={handleClick}>sample document3.pdf</li>
+
+        </ul>  
     </div>
   );
 }

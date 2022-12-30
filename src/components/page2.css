@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+.leftPart{
+    flex-basis: 40%;
+    margin-top: 10px;
+    margin-left: 20px;
+    max-height: 98vh;
+    overflow: scroll;
+}
+
+.labelDiv>h1{
+    color: rgb(22, 16, 16);
+}
+.labelDiv>h1::after, .BoxesDiv>h1::after{
+    content: " ";
+    display: block;
+    width: 60%;
+    height: 1px;
+    margin-top: 15px;
+    background-color: rgb(0 118 175);
+}
+button{
+    width: 80px;
+    height: 40px;
+    margin: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.title{
+background-color: #ff6a00ba;
+}
+.author{
+    background-color: #8aa94f;
+    width: 100px;
+}
+.BoxesDiv{
+    margin-top: 10%;
+}
+.Box_content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Box_contents{
+    overflow: scroll;
+}
+
+
+
+.rightPart{
+    flex-basis: 60%;
+    overflow: scroll;
+    max-height: 90vh;
+}
+::-webkit-scrollbar{
+    display: none;
+}
